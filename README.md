@@ -1,5 +1,5 @@
-API de Tramitação de Processos - Modernização de Sistema Legado
-📜 Sobre o Projeto
+#API de Tramitação de Processos - Modernização de Sistema Legado
+##📜 Sobre o Projeto
 Este projeto consiste na criação de uma API RESTful robusta e segura, desenvolvida com Java e Spring Boot, para gerenciar o fluxo de tramitação de processos internos. O principal objetivo foi modernizar um módulo existente de um sistema legado em PHP procedural, visando a transformação digital e a redução drástica do uso de papel.
 
 A nova API atua como um micro-serviço desacoplado, que se integra ao sistema PHP existente, permitindo uma migração gradual e segura, sem interromper as operações atuais. A solução final é um sistema híbrido onde o frontend legado (PHP) consome os dados e executa as regras de negócio através da nova API Java.
@@ -115,7 +115,7 @@ Copie os ficheiros PHP para a pasta do seu servidor web (ex: htdocs/sicom/).
 
 Certifique-se de que os ficheiros de conexão com o banco de dados (ex: funcoes/conexao.php) estão com as credenciais corretas para o sistema PHP legado.
 
-Aceda ao sistema através do seu navegador (ex: http://localhost/sicom/pages/PaginaInicial.php).
+Aceda ao sistema através do seu navegador 
 
 📚 Documentação da API
 A API está documentada com Swagger (OpenAPI). Após iniciar o backend, a documentação interativa estará disponível em:
