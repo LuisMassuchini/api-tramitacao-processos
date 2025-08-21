@@ -115,5 +115,5 @@ curl -H "Authorization: Bearer <seu-token>" http://localhost:9090/api/processos
 - Defina a licença do projeto (MIT/Apache-2.0)
 
 ## 📞 Contato
-- LinkedIn: [SEU-LINK-AQUI]
-- Email: seu-email@exemplo.com
+- LinkedIn:https://www.linkedin.com/in/luis-massuchini/- 
+- Email: luis.massuchini@gmail.com
