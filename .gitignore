@@ -1,0 +1,31 @@
+# Arquivos de log
+logs/
+*.log
+
+# Arquivos de Build e Saída do Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# Arquivos da IDE
+.idea/
+*.iml
+*.iws
+.classpath
+.project
+.settings/
+
+# Arquivos do Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração local (NUNCA envie para o GitHub)
+application-local.properties
+
+# Pasta de uploads (contém dados dos usuários)
+uploads/
