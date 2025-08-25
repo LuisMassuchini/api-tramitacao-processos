@@ -1,0 +1,39 @@
+# O nome do nosso fluxo de trabalho. Aparecerá na aba "Actions" do GitHub.
+name: CI Tramite de arquivos
+
+# A "condição" que dispara o robô.
+on:
+  # Disparar quando houver um 'push' (envio de código)...
+  push:
+    # ...especificamente para a branch 'main'.
+    branches: [ main ]
+  # Também permite rodar manualmente pela interface do GitHub
+  workflow_dispatch:
+
+# A lista de "trabalhos" que o robô deve executar.
+jobs:
+  # Estamos definindo um único trabalho chamado 'build-e-test'.
+  build-e-test:
+    # O tipo de máquina que o robô usará. 'ubuntu-latest' é uma boa escolha padrão.
+    runs-on: ubuntu-latest
+
+    # A sequência de "passos" que o robô executará dentro deste trabalho.
+    steps:
+      # Passo 1: Baixar o código do repositório
+      # Usa uma "action" pré-pronta da comunidade para fazer o checkout do código.
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      # Passo 2: Configurar o ambiente com a versão correta do Java (JDK)
+      # Usa outra action pronta para instalar o Java 17.
+      - name: Configurar JDK 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin' # Uma distribuição popular do Java
+          cache: maven # Armazena dependências para acelerar builds futuros
+
+      # Passo 3: Rodar o build e os testes com Maven
+      # Executa um comando diretamente no terminal da máquina do robô.
+      - name: Build com Maven
+        run: mvn -B package --file pom.xml
